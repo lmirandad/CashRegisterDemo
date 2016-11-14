@@ -27,6 +27,10 @@ public class CashRegisterController {
 		SocketChannel sc = SocketConnection();		
 		
 		//Open Pinpad Port
+		PinPadDll ppdll = new PinPadDll();
+		System.out.println(ppdll.fiOpenPort(System.getProperty("user.dir") + "\\res\\DLL3500.ini"));
+		
+		
 		
 		
 		//Close Socket Connection;
