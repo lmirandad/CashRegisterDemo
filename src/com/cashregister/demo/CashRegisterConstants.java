@@ -16,6 +16,7 @@ public class CashRegisterConstants {
 	public final static String OP_DETALLE_OPERACIONES = "13";
 	public final static String OP_FINANCIERA = "90";
 	public final static String OP_NO_FINANCIERA = "91";
+	public final static String IP_HOST = "216.244.130.220";
 	public final static int RET_RUNNING = 1;
 	public final static int RET_OK = 0;
 	public final static int RET_NOK = -1;
@@ -26,5 +27,6 @@ public class CashRegisterConstants {
 	public final static int ERR_HOST_NO_RESP = -6;
 	public final static int ERR_PRINTER = -7;
 	public final static int ERR_NAK_RECEIVED = -8;
-	public final static int ERR_LRC_PPAD = -9;
+	public final static int ERR_LRC_PPAD = -9;	
+	public final static int IP_PORT = 20000;
 }
