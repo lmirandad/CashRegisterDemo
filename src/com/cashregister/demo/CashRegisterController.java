@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.channels.SocketChannel;
 
+import com.sun.jna.Native;
+
 
 
 public class CashRegisterController {
@@ -26,12 +28,8 @@ public class CashRegisterController {
 		//Open Socket Connection
 		SocketChannel sc = SocketConnection();		
 		
-		//Open Pinpad Port
-		PinPadDll ppdll = new PinPadDll();
-		System.out.println(ppdll.fiOpenPort(System.getProperty("user.dir") + "\\res\\DLL3500.ini"));
-		
-		
-		
+		PinpadDll pdll = (PinpadDll)Native.loadLibrary("CAJA_PINPAD", PinpadDll.class);
+		System.out.println(pdll.fiOpenPort("DLL3500.ini"));
 		
 		//Close Socket Connection;
 		SocketDisconnection(sc);
